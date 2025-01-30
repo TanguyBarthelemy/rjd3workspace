@@ -8,8 +8,7 @@
 <url><loc>/reference/add_sa_item.html</loc></url>
 <url><loc>/reference/add_variable.html</loc></url>
 <url><loc>/reference/deprecated-rjd3workspace.html</loc></url>
-<url><loc>/reference/dot-jsa_metadata.html</loc></url>
-<url><loc>/reference/dot-jsa_read.html</loc></url>
+<url><loc>/reference/dot-jsai_metadata.html</loc></url>
 <url><loc>/reference/dot-jsap_name.html</loc></url>
 <url><loc>/reference/dot-jws_new.html</loc></url>
 <url><loc>/reference/dot-jws_open.html</loc></url>
@@ -19,6 +18,7 @@
 <url><loc>/reference/index.html</loc></url>
 <url><loc>/reference/make_copy.html</loc></url>
 <url><loc>/reference/read_calendars.html</loc></url>
+<url><loc>/reference/read_sai.html</loc></url>
 <url><loc>/reference/read_variables.html</loc></url>
 <url><loc>/reference/read_workspace.html</loc></url>
 <url><loc>/reference/refresh.html</loc></url>
