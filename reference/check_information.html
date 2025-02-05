@@ -64,10 +64,14 @@ the WS, or an error specifying the not found object.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>If the object idx_sai is NULL then the function will only check if the workspace contains a SA-Processing at the index idx_sap.
-If the object idx_sap is NULL then the function will check if every SA-Processing of the workspace contains a SA-Item at the index idx_sai.
-If the object idx_sap is NULL and idx_sai is NULL then the function will check nothing.</p>
-<p>If the object idx_sap and / or idx_sai have a length &gt; 1 then the checks are iterated over all the indices.</p>
+    <p>If the object idx_sai is NULL then the function will only check if the
+workspace contains a SA-Processing at the index idx_sap.
+If the object idx_sap is NULL then the function will check if every
+SA-Processing of the workspace contains a SA-Item at the index idx_sai.
+If the object idx_sap is NULL and idx_sai is NULL then the function will
+check nothing.</p>
+<p>If the object idx_sap and / or idx_sai have a length &gt; 1 then the checks are
+iterated over all the indices.</p>
     </div>
 
     <div class="section level2">
@@ -75,10 +79,10 @@ If the object idx_sap is NULL and idx_sai is NULL then the function will check n
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># ws &lt;- .jws_open(file = "ws_production.xml")</span></span></span>
 <span class="r-in"><span><span class="co">#</span></span></span>
-<span class="r-in"><span><span class="co"># # Check if the SA-Item n°3 in the SA-Processing n°1 exist</span></span></span>
+<span class="r-in"><span><span class="co"># # Check if the SA-Item 3 in the SA-Processing 1 exist</span></span></span>
 <span class="r-in"><span><span class="co"># check_information(jws = ws, idx_sap = 1, idx_sai = 3)</span></span></span>
-<span class="r-in"><span><span class="co">#</span></span></span>
-<span class="r-in"><span><span class="co"># # Check if the SA-Items 1, 2 and 5 in the SA-Processing n°1 exist</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># # Check if the SA-Items 1, 2 and 5 in the SA-Processing 1 exist</span></span></span>
 <span class="r-in"><span><span class="co"># check_information(jws = ws, idx_sap = 1, idx_sai = c(1, 2, 5))</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
