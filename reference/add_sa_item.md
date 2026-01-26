@@ -73,7 +73,7 @@ rws$processing$sap1$series_4
 #> [1] ""
 #> 
 #> $id
-#> [1] "5ba2f4e3-1982-467e-a06d-44638d08b028"
+#> [1] "27992cf3-9bf4-40a1-b748-2dcbf6e272c1"
 #> 
 #> attr(,"class")
 #> [1] "JD3_TSMONIKER"
@@ -164,11 +164,11 @@ rws$processing$sap1$series_4
 #> Specification
 #> 
 #> Series
-#> Serie span: ALL
+#> Serie span: All 
 #> Preliminary Check: Yes
 #> 
 #> Estimate
-#> Model span: ALL
+#> Model span: All 
 #> Tolerance: 1e-07
 #> Exact ML: No
 #> Unit root limit: 0.96
@@ -216,11 +216,11 @@ rws$processing$sap1$series_4
 #> Specification
 #> 
 #> Series
-#> Serie span: ALL
+#> Serie span: All 
 #> Preliminary Check: Yes
 #> 
 #> Estimate
-#> Model span: ALL
+#> Model span: All 
 #> Tolerance: 1e-07
 #> Exact ML: No
 #> Unit root limit: 0.96
@@ -268,11 +268,11 @@ rws$processing$sap1$series_4
 #> Specification
 #> 
 #> Series
-#> Serie span: ALL
+#> Serie span: All 
 #> Preliminary Check: Yes
 #> 
 #> Estimate
-#> Model span: ALL
+#> Model span: All 
 #> Tolerance: 1e-07
 #> Exact ML: No
 #> Unit root limit: 0.96
