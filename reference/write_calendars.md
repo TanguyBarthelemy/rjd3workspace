@@ -45,4 +45,5 @@ write_calendars(BE,
         file = normalizePath("~/tmp.xml", mustWork = FALSE))
 write_calendars(list(BEL_cal = BE),
         file = normalizePath("~/tmp.xml", mustWork = FALSE))
+#> Error in write_calendars(list(BEL_cal = BE), file = normalizePath("~/tmp.xml",     mustWork = FALSE)): calendars must be a `JD3_CALENDAR` or a named list of `JD3_CALENDAR` objects
 ```

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rjd3workspace</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.6.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.5.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,12 +102,6 @@
 <span class="r-in"><span><span class="co"># Adding SA-item as raw series + specification</span></span></span>
 <span class="r-in"><span><span class="fu">add_sa_item</span><span class="op">(</span><span class="va">jsap1</span>, name <span class="op">=</span> <span class="st">"series_3"</span>, x <span class="op">=</span> <span class="va">y</span>, <span class="fu">rjd3x13</span><span class="fu">::</span><span class="fu"><a href="https://rjdverse.github.io/rjd3x13/reference/x13_spec.html" class="external-link">x13_spec</a></span><span class="op">(</span><span class="st">"RSA3"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">add_sa_item</span><span class="op">(</span><span class="va">jsap1</span>, name <span class="op">=</span> <span class="st">"series_4"</span>, x <span class="op">=</span> <span class="va">y</span>, <span class="fu">rjd3tramoseats</span><span class="fu">::</span><span class="fu"><a href="https://rjdverse.github.io/rjd3tramoseats/reference/tramoseats_spec.html" class="external-link">tramoseats_spec</a></span><span class="op">(</span><span class="st">"RSAFull"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">jsai1</span> <span class="op">&lt;-</span> <span class="fu"><a href="jws_sap.html">jsap_sai</a></span><span class="op">(</span>jsap <span class="op">=</span> <span class="va">jsap1</span>, idx <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co"># Adding SA-item from a Workspace</span></span></span>
-<span class="r-in"><span><span class="fu">add_sa_item</span><span class="op">(</span>jsap <span class="op">=</span> <span class="va">jsap1</span>, name <span class="op">=</span> <span class="st">"series_1_bis"</span>, x <span class="op">=</span> <span class="va">jsai1</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .jcall(clazz, "Z", "isInstance", .jcast(o, "java/lang/Object")):</span> method isInstance with signature ()Z not found</span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">rws</span> <span class="op">&lt;-</span> <span class="fu"><a href="read_workspace.html">read_workspace</a></span><span class="op">(</span><span class="va">jws</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">rws</span><span class="op">$</span><span class="va">processing</span><span class="op">$</span><span class="va">sap1</span><span class="op">$</span><span class="va">series_4</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ts</span>
@@ -119,7 +113,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "27992cf3-9bf4-40a1-b748-2dcbf6e272c1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "971d5325-57e3-42f9-aa79-fc8c814d3972"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "JD3_TSMONIKER"</span>

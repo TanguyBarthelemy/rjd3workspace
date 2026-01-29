@@ -56,12 +56,6 @@ add_sa_item(jsap1, name = "series_2", x = rjd3tramoseats::tramoseats(y))
 # Adding SA-item as raw series + specification
 add_sa_item(jsap1, name = "series_3", x = y, rjd3x13::x13_spec("RSA3"))
 add_sa_item(jsap1, name = "series_4", x = y, rjd3tramoseats::tramoseats_spec("RSAFull"))
-
-jsai1 <- jsap_sai(jsap = jsap1, idx = 1L)
-# Adding SA-item from a Workspace
-add_sa_item(jsap = jsap1, name = "series_1_bis", x = jsai1)
-#> Error in .jcall(clazz, "Z", "isInstance", .jcast(o, "java/lang/Object")): method isInstance with signature ()Z not found
-
 rws <- read_workspace(jws)
 rws$processing$sap1$series_4
 #> $ts
@@ -73,7 +67,7 @@ rws$processing$sap1$series_4
 #> [1] ""
 #> 
 #> $id
-#> [1] "27992cf3-9bf4-40a1-b748-2dcbf6e272c1"
+#> [1] "971d5325-57e3-42f9-aa79-fc8c814d3972"
 #> 
 #> attr(,"class")
 #> [1] "JD3_TSMONIKER"

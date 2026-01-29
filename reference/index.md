@@ -141,9 +141,7 @@ Functions to get and set metadata from an SA-Item
   : Get/Set the (JDemetra+) time series of a SA-item
 - [`set_ts_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
   [`put_ts_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
-  [`set_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
-  [`put_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
-  : Set (JDemetra+) Metadata of a SA-item
+  : Set (JDemetra+) Time Series Metadata of a SA-item
 
 ## Calendars and regressors
 

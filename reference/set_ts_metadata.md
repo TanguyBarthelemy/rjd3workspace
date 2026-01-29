@@ -1,12 +1,9 @@
-# Set (JDemetra+) Metadata of a SA-item
+# Set (JDemetra+) Time Series Metadata of a SA-item
 
-Function to set the metadata of a SA-item.
-
-`XXX_ts_metadata()` set the time series metadata of a SA-item (provider,
-source of the data...). `XXX_metadata()` set any metadata to a SA-Item.
-
-`set_XXX()` uses the metadata of another SA-item while `put_XXX()`
-allows to update a specific key with a new information.
+Function to set the time series metadata of a SA-item (provider, source
+of the data...). `set_ts_metadata()` uses the metadata of another
+SA-item while `put_ts_metadata()` allows to update a specific key with a
+new information.
 
 ## Usage
 
@@ -14,10 +11,6 @@ allows to update a specific key with a new information.
 set_ts_metadata(jsap, idx, ref_jsai)
 
 put_ts_metadata(jsap, idx, key, value)
-
-set_metadata(jsap, ref_jsai, idx)
-
-put_metadata(jsap, idx, key, value)
 ```
 
 ## Arguments
@@ -51,11 +44,9 @@ jws <- jws_open(file)
 jsap <- jws_sap(jws, 1)
 jsai <- jsap_sai(jsap, 1)
 nid <- rjd3providers::txt_change_file(get_ts_metadata(jsai, "@id"), "test.csv")
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 put_ts_metadata(jsap, 1, "@id", nid)
-#> Error: object 'nid' not found
 
 jsai <- jsap_sai(jsap, 1)
 get_ts_metadata(jsai, "@id")
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
+#> [1] "demetra://tsprovider/Txt/20111201/SERIES?datePattern=dd%2FMM%2Fyyyy&delimiter=SEMICOLON&file=test.csv#seriesIndex=3"
 ```
