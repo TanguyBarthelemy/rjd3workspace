@@ -1,9 +1,12 @@
-# Set (JDemetra+) Time Series Metadata of a SA-item
+# Set (JDemetra+) Metadata of a SA-item
 
-Function to set the time series metadata of a SA-item (provider, source
-of the data...). `set_ts_metadata()` uses the metadata of another
-SA-item while `put_ts_metadata()` allows to update a specific key with a
-new information.
+Function to set the metadata of a SA-item.
+
+`XXX_ts_metadata()` set the time series metadata of a SA-item (provider,
+source of the data...). `XXX_metadata()` set any metadata to a SA-Item.
+
+`set_XXX()` uses the metadata of another SA-item while `put_XXX()`
+allows to update a specific key with a new information.
 
 ## Usage
 
@@ -11,6 +14,10 @@ new information.
 set_ts_metadata(jsap, idx, ref_jsai)
 
 put_ts_metadata(jsap, idx, key, value)
+
+set_metadata(jsap, ref_jsai, idx)
+
+put_metadata(jsap, idx, key, value)
 ```
 
 ## Arguments

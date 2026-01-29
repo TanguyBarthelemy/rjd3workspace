@@ -1,6 +1,6 @@
 # Changelog
 
-## rjd3workspace 3.5.1.9000
+## rjd3workspace 3.6.0.9000
 
 All notable changes to this project will be documented in this file.
 
@@ -8,14 +8,34 @@ The format is based on [Keep a
 Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [Unreleased](https://github.com/rjdverse/rjd3workspace/compare/v3.5.1...HEAD)
+### [Unreleased](https://github.com/rjdverse/rjd3workspace/compare/v3.6.0...HEAD)
+
+### [3.6.0](https://github.com/rjdverse/rjd3workspace/compare/v3.5.1...v3.6.0) - 2025-12-01
+
+#### Added
+
+- New function
+  [`set_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
+  to copy the metadata from another SAItem
+- New function
+  [`put_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
+  to update a SAI with any metadata (key, value)
+- Residuals are available
+  [\#3](https://github.com/rjdverse/rjd3workspace/issues/3)
+
+#### Deprecated
+
+- Function
+  [`.jws_add()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md)
+  is deprecated. Please use function
+  [`jws_add()`](https://rjdverse.github.io/rjd3workspace/reference/jws_add.md)
+  instead.
 
 #### Changed
 
-- Rename
-  [`.jws_add()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md)
-  into
-  [`jws_add()`](https://rjdverse.github.io/rjd3workspace/reference/jws_add.md)
+- [`write_calendars()`](https://rjdverse.github.io/rjd3workspace/reference/write_calendars.md)
+  accepts now multiple calendars
+  [\#95](https://github.com/rjdverse/rjd3workspace/issues/95)
 
 ### [3.5.1](https://github.com/rjdverse/rjd3workspace/compare/v3.5.0...v3.5.1) - 2025-06-19
 
