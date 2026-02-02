@@ -1,18 +1,18 @@
 #' @include saprocessing.R
 NULL
 
-setClass("workspace", contains = "jobjRef")
-setClass("sa_item", contains = "jobjRef")
-setClass("sa_processing", contains = "jobjRef")
+setClass("JD3_WORKSPACE", contains = "jobjRef")
+setClass("JD3_SA_ITEM", contains = "jobjRef")
+setClass("JD3_SA_PROCESSING", contains = "jobjRef")
 
-is.sa_processing <- function(x){
-    inherits(x, "sa_processing")
+is.JD3_SA_PROCESSING <- function(x){
+    inherits(x, "JD3_SA_PROCESSING")
 }
-is.sa_item <- function(x){
-    inherits(x, "sa_item")
+is.JD3_SA_ITEM <- function(x){
+    inherits(x, "JD3_SA_ITEM")
 }
-is.workspace <- function(x){
-    inherits(x, "workspace")
+is.JD3_WORKSPACE <- function(x){
+    inherits(x, "JD3_WORKSPACE")
 }
 
 #' Create a Workspace or SA-Processing
@@ -53,19 +53,28 @@ jws_new <- function(modelling_context = NULL) {
     if (!is.null(modelling_context)) {
         set_context(jws, modelling_context)
     }
-    jws <- new("workspace", jws)
+    jws <- new("JD3_WORKSPACE", jws)
     return(jws)
 }
+
 #' @name jws_new
 #' @export
 jws_sap_new <- function(jws, name) {
-    return(.jcall(jws, "Ljdplus/sa/base/workspace/MultiProcessing;", "newMultiProcessing", name))
+    jsap <- .jcall(
+        obj = jws,
+        returnSig = "Ljdplus/sa/base/workspace/MultiProcessing;",
+        method = "newMultiProcessing",
+        name
+    )
+    jsap <- new("JD3_SA_PROCESSING", jsap)
+    return(jsap)
 }
 
 #' @title Add a SA-Processing to a Workspace
 #' @name jws_add
 #' @export
 jws_add <- function(jws, jsap) {
+    jsap <- new("jobjRef", jobj = jsap@jobj, jclass = "jdplus/sa/base/workspace/MultiProcessing")
     .jcall(jws, "V", "add", jsap)
 }
 
@@ -295,7 +304,7 @@ jws_sap <- function(jws, idx) {
         method = "getMultiProcessing",
         as.integer(idx - 1L)
     )
-    jsap <- new("sa_processing", jsap)
+    jsap <- new("JD3_SA_PROCESSING", jsap)
     return(jsap)
 }
 
@@ -344,7 +353,7 @@ jws_open <- function(file) {
         returnSig = "Ljdplus/sa/base/workspace/Ws;",
         method = "open", full_file_name
     )
-    jws <- new("workspace", jws)
+    jws <- new("JD3_WORKSPACE", jws)
     return(jws)
 }
 

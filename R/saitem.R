@@ -98,13 +98,15 @@ read_sai <- function(jsai) {
             }
         }
     }
-    return(list(
+
+    output <- list(
         ts = rts,
         domainSpec = dspec,
         estimationSpec = spec,
         pointSpec = pspec,
         results = rslt
-    ))
+    )
+    return(output)
 }
 
 #' @title Extract results from a SA-item
@@ -197,6 +199,7 @@ get_metadata <- function(jsai, key) {
 #' @name get_metadata
 #' @export
 get_ts_metadata <- function(jsai, key) {
+    jsai <- new("jobjRef", jobj = jsai@jobj, jclass = "jdplus/sa/base/api/SaItem")
     val <- .jcall(
         obj = "jdplus/sa/base/workspace/Utility",
         returnSig = "S",

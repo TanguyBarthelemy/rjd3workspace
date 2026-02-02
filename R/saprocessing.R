@@ -51,9 +51,10 @@ jsap_sai <- function(jsap, idx) {
         return(NULL)
     }
     jsai <- .jcall(jsap, "Ljdplus/sa/base/api/SaItem;", "get", as.integer(idx - 1L))
-    jsai <- new("sa_item", jsai)
+    jsai <- new("JD3_SA_ITEM", jsai)
     return(jsai)
 }
+
 #' @name sap_name
 #' @export
 sap_sai_names <- function(jsap) {
@@ -180,6 +181,7 @@ jsap_refresh <- function(jsap,
 add_sa_item <- function(jsap, name, x, spec, ...) {
     UseMethod("add_sa_item", x)
 }
+
 #' @export
 add_sa_item.ts <- function(jsap, name, x, spec, ...) {
     jts <- rjd3toolkit::.r2jd_tsdata(x)
@@ -196,28 +198,35 @@ add_sa_item.ts <- function(jsap, name, x, spec, ...) {
         jts,
         .jcast(jspec, "jdplus/sa/base/api/SaSpecification")
     )
+    return(invisible(TRUE))
 }
+
 #' @export
-add_sa_item.default <- function(jsap, name, x, spec, ...) {
-    if (inherits(x, "JD3_X13_OUTPUT")) {
-        y <- x$result$preadjust$a1
-        spec <- x$estimation_spec
-    } else if (inherits(x, "JD3_TRAMOSEATS_OUTPUT")) {
-        y <- x$result$final$series$data
-        spec <- x$estimation_spec
-    } else if (inherits(x$estimationSpec, c("JD3_X13_SPEC", "JD3_TRAMOSEATS_SPEC"))) {
-        y <- x$ts
-        spec <- x$estimationSpec
-    } else {
-        stop("wrong type of spec")
-    }
-    add_sa_item.ts(
+add_sa_item.JD3_X13_OUTPUT <- function(jsap, name, x, spec, ...) {
+    y <- x$result$preadjust$a1
+    spec <- x$estimation_spec
+    add_sa_item(
         jsap = jsap,
         x = y,
         spec = spec,
         name = name,
         ...
     )
+    return(invisible(TRUE))
+}
+
+#' @export
+add_sa_item.JD3_TRAMOSEATS_OUTPUT <- function(jsap, name, x, spec, ...) {
+    y <- x$result$final$series$data
+    spec <- x$estimation_spec
+    add_sa_item(
+        jsap = jsap,
+        x = y,
+        spec = spec,
+        name = name,
+        ...
+    )
+    return(invisible(TRUE))
 }
 
 #' @export
@@ -230,7 +239,35 @@ add_sa_item.jobjRef <- function(jsap, name, x, spec, ...) {
     } else {
         stop("x is not SaItem")
     }
-    invisible(TRUE)
+    return(invisible(TRUE))
+}
+
+#' @export
+add_sa_item.JD3_SA_ITEM <- function(jsap, name, x, spec, ...) {
+    x <- new("jobjRef", jobj = x@jobj, jclass = "jdplus/sa/base/api/SaItem")
+    .jcall(jsap, "V", "add", x)
+    if (!missing(name)) {
+        set_name(jsap, name = name, idx = sap_sai_count(jsap))
+    }
+    return(invisible(TRUE))
+}
+
+#' @export
+add_sa_item.default <- function(jsap, name, x, spec, ...) {
+    if (inherits(x$estimationSpec, c("JD3_X13_SPEC", "JD3_TRAMOSEATS_SPEC"))) {
+        y <- x$ts
+        spec <- x$estimationSpec
+    } else {
+        stop("wrong type of spec")
+    }
+    add_sa_item(
+        jsap = jsap,
+        x = y,
+        spec = spec,
+        name = name,
+        ...
+    )
+    return(invisible(TRUE))
 }
 
 #' @title Replace or Remove a SA-item
@@ -246,6 +283,7 @@ add_sa_item.jobjRef <- function(jsap, name, x, spec, ...) {
 #' @return \code{NULL} returned invisibly
 #' @export
 replace_sa_item <- function(jsap, idx, jsai) {
+    jsai <- new("jobjRef", jobj = jsai@jobj, jclass = "jdplus/sa/base/api/SaItem")
     .jcall(
         obj = jsap, returnSig = "V", method = "set",
         as.integer(idx - 1L), jsai
@@ -367,6 +405,7 @@ set_specification <- function(jsap, idx, spec) {
     )
     replace_sa_item(jsap, jsai = jsai, idx = idx)
 }
+
 #' @name set_specification
 #' @export
 set_domain_specification <- function(jsap, idx, spec) {
@@ -387,6 +426,7 @@ set_domain_specification <- function(jsap, idx, spec) {
     )
     replace_sa_item(jsap, jsai = jsai, idx = idx)
 }
+
 #' @title Get/Set Raw Data in a SA-item
 #'
 #' @inheritParams replace_sa_item
@@ -630,6 +670,7 @@ set_ts_metadata <- function(jsap, idx, ref_jsai) {
 #' @export
 put_ts_metadata <- function(jsap, idx, key, value) {
     jsai <- jsap_sai(jsap, idx = idx)
+    jsai <- new("jobjRef", jobj = jsai@jobj, jclass = "jdplus/sa/base/api/SaItem")
     jsai <- .jcall(
         "jdplus/sa/base/workspace/Utility",
         "Ljdplus/sa/base/api/SaItem;",
