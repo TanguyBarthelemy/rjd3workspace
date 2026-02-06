@@ -35,13 +35,13 @@ jsai1 <- jsap_sai(jsap1, 3)
 
 # Extract the comment as metadata
 get_metadata(jsai1, "comment")
-#> NULL
+#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleMetaData", jsai, as.character(key)): method getSingleMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 
 # Extract the ts metadata
 get_metadata(jsai1, "@id")
-#> NULL
+#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleMetaData", jsai, as.character(key)): method getSingleMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 get_metadata(jsai1, "@source")
-#> NULL
+#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleMetaData", jsai, as.character(key)): method getSingleMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 get_metadata(jsai1, "@timestamp")
-#> NULL
+#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleMetaData", jsai, as.character(key)): method getSingleMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 ```
