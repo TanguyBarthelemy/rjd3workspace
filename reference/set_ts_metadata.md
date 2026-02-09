@@ -51,11 +51,9 @@ jws <- jws_open(file)
 jsap <- jws_sap(jws, 1)
 jsai <- jsap_sai(jsap, 1)
 nid <- rjd3providers::txt_change_file(get_ts_metadata(jsai, "@id"), "test.csv")
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 put_ts_metadata(jsap, 1, "@id", nid)
-#> Error: object 'nid' not found
 
 jsai <- jsap_sai(jsap, 1)
 get_ts_metadata(jsai, "@id")
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
+#> [1] "demetra://tsprovider/Txt/20111201/SERIES?datePattern=dd%2FMM%2Fyyyy&delimiter=SEMICOLON&file=test.csv#seriesIndex=3"
 ```

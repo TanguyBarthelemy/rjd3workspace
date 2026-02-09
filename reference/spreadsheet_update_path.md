@@ -49,7 +49,6 @@ spreadsheet_update_path(
     new_path = system.file("data", "IPI_nace4.xlsx", package = "rjd3workspace"),
     idx_sap = 2
 )
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
 
 # Select one (the 2nd) SA-item from second SA-Processing
 sap2 <- jws_sap(my_ws, 2)
@@ -57,5 +56,5 @@ sai2 <- jsap_sai(sap2, 2)
 
 # Check path
 get_ts_metadata(sai2, "@id")
-#> Error in .jcall(obj = "jdplus/sa/base/workspace/Utility", returnSig = "S",     method = "getSingleTsMetaData", jsai, as.character(key)): method getSingleTsMetaData with signature (Ljava/lang/String;)Ljava/lang/String; not found
+#> [1] "demetra://tsprovider/XCLPRVDR/20111201/SERIES?file=%2Fhome%2Frunner%2Fwork%2F_temp%2FLibrary%2Frjd3workspace%2Fdata%2FIPI_nace4.xlsx#seriesName=RF0899&sheetName=IPI"
 ```
