@@ -62,6 +62,13 @@ add_sa_item(jsap1, name = "series_3", x = y, rjd3x13::x13_spec("RSA3"))
 #> Error in .jcall("jdplus/toolkit/base/r/timeseries/TsUtility", "Ljdplus/toolkit/base/api/timeseries/TsData;",     "of", as.integer(freq), as.integer(start[1]), as.integer(start[2]),     as.double(s)): RcallMethod: cannot determine object class
 add_sa_item(jsap1, name = "series_4", x = y, rjd3tramoseats::tramoseats_spec("RSAFull"))
 #> Error in .jcall("jdplus/toolkit/base/r/timeseries/TsUtility", "Ljdplus/toolkit/base/api/timeseries/TsData;",     "of", as.integer(freq), as.integer(start[1]), as.integer(start[2]),     as.double(s)): java.lang.UnsupportedClassVersionError: jdplus/toolkit/base/r/timeseries/TsUtility has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+
+jsai1 <- jsap_sai(jsap = jsap1, idx = 1L)
+#> Error: object 'jsap1' not found
+# Adding SA-item from a Workspace
+add_sa_item(jsap = jsap1, name = "series_1_bis", x = jsai1)
+#> Error: object 'jsai1' not found
+
 rws <- read_workspace(jws)
 #> Error: object 'jws' not found
 rws$processing$sap1$series_4
