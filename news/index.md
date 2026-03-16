@@ -36,6 +36,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - [`write_calendars()`](https://rjdverse.github.io/rjd3workspace/reference/write_calendars.md)
   accepts now multiple calendars
   [\#95](https://github.com/rjdverse/rjd3workspace/issues/95)
+- New JARS related to version
+  [3.6.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.6.0)
 
 ### [3.5.1](https://github.com/rjdverse/rjd3workspace/compare/v3.5.0...v3.5.1) - 2025-06-19
 
@@ -104,6 +106,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 #### Changed
 
 - Simplified the modification of path in `update_path()`
+- New JARS related to version
+  [3.5.1](https://github.com/jdemetra/jdplus-main/releases/tag/v3.5.1)
 
 #### Removed
 
@@ -136,6 +140,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   [`get_priority()`](https://rjdverse.github.io/rjd3workspace/reference/set_priority.md)
 - Rename the argument `ref_jsa` in `ref_jsai` in
   [`set_ts_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
+- New JARS related to version
+  [3.5.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.5.0)
 
 #### Deprecated
 
@@ -308,16 +314,42 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   [`.jread_workspace()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md)
   to extract the Java object of the results of a SAItem.
 
+#### Changed
+
+- New JARS related to version
+  [3.2.4](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.4)
+
 ### [3.2.3](https://github.com/rjdverse/rjd3workspace/compare/v3.2.2...v3.2.3) - 2024-07-12
 
 #### Changed
 
-- new jars
+- New JARS related to version
+  [3.2.3](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.3)
 
 ### [3.2.2](https://github.com/rjdverse/rjd3workspace/compare/v3.2.1...v3.2.2) - 2024-03-15
 
+#### Changed
+
+- New JARS related to version
+  [3.2.2](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.2)
+
 ### [3.2.1](https://github.com/rjdverse/rjd3workspace/compare/v3.2.0...v3.2.1) - 2023-12-12
+
+#### Changed
+
+- New JARS related to version
+  [3.2.1](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.1)
 
 ### [3.2.0](https://github.com/rjdverse/rjd3workspace/compare/v3.1.0...v3.2.0) - 2023-11-24
 
+#### Changed
+
+- New JARS related to version
+  [3.2.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.0)
+
 ### [3.1.0](https://github.com/rjdverse/rjd3workspace/releases/tag/v3.1.0) - 2023-08-11
+
+#### Added
+
+- New JARS related to version
+  [3.1.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.1.0)
