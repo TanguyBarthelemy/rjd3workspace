@@ -56,7 +56,9 @@ jws <- jws_new()
 jsap1 <- jws_sap_new(jws, "sap1")
 
 # Adding SA-item as estimation result
-# Estimation with rjd313
+
+# \donttest{
+# Estimation with rjd3x13
 add_sa_item(jsap1, name = "series_1", x = rjd3x13::x13(y))
 
 # Estimation with rjd3tramoseats
@@ -81,7 +83,7 @@ rws$processing$sap1$series_4
 #> [1] ""
 #> 
 #> $id
-#> [1] "dad4648c-503f-445d-ba00-5ba8409a23e1"
+#> [1] "809b44f2-079f-48dc-8317-b07c3582d1b2"
 #> 
 #> attr(,"class")
 #> [1] "JD3_TSMONIKER"
@@ -346,4 +348,5 @@ rws$processing$sap1$series_4
 
 # Writing the workspace
 save_workspace(jws, file.path(dir, "workspace.xml"))
+# }
 ```
