@@ -109,11 +109,17 @@ More information on revision policies in JDemetra+ documentation:
 
 # Load workspace
 file <- system.file("workspaces", "workspace_test_refresh.xml", package = "rjd3workspace")
+
 # \donttest{
 jws <- jws_open(file)
+txt_update_path(
+    jws = jws,
+    new_path = system.file("extdata", "IPI_nace4.csv", package = "rjd3workspace")
+)
 jws_compute(jws)
+
 # Read current workspace: reference spec and estimation spec
-rws <- read_workspace(jws, compute= TRUE)
+rws <- read_workspace(jws, compute = TRUE)
 rws$processing$`SAProcessing-1`$`RF0811`$referenceSpec
 #> Specification
 #> 
@@ -236,19 +242,75 @@ rws$processing$`SAProcessing-1`$`RF0811`$estimationSpec
 #> Rho: 1 (Auto)
 #> Bias: BIAS_NONE (Auto)
 #> Use forecast: Yes
+
 # Refresh workspace COMPLETE
 jws_refresh(jws, policy = "Complete")
+
 # Read refreshed workspace: new estimation spec
-rws2 <- read_workspace(jws, compute= TRUE)
-#> Error: Expecting a single value: [extent=0].
+rws2 <- read_workspace(jws, compute = TRUE)
 rws2$processing$`SAProcessing-1`$`RF0811`$estimationSpec
-#> Error: object 'rws2' not found
+#> Specification
+#> 
+#> Series
+#> Serie span: All 
+#> Preliminary Check: Yes
+#> 
+#> Estimate
+#> Model span: All 
+#> 
+#> Tolerance: 1e-07
+#> 
+#> Transformation
+#> Function: AUTO
+#> AIC difference: -2
+#> Adjust: NONE
+#> 
+#> Regression
+#> No calendar regressor
+#> 
+#> Easter: No
+#> 
+#> Pre-specified outliers: 1
+#>  - LS.2024-01, coefficient: 0 (UNDEFINED)
+#> Ramps: No
+#> 
+#> Outliers
+#> Detection span: All 
+#> Outliers type: 
+#>  - AO, critical value : 0 (Auto)
+#>  - LS, critical value : 0 (Auto)
+#>  - TC, critical value : 0 (Auto)
+#> TC rate: 0.7 (Auto)
+#> Method: ADDONE (Auto)
+#> 
+#> ARIMA
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>         0         0 
+#> 
+#> Specification X11
+#> Seasonal component: Yes
+#> Length of the Henderson filter: 0
+#> Seasonal filter: FILTER_MSR
+#> Boundaries used for extreme values correction : 
+#>   lower_sigma:  1.5 
+#>   upper_sigma:  2.5
+#> Nb of forecasts: -1
+#> Nb of backcasts: 0
+#> Calendar sigma: NONE
+#> 
+#> Benchmarking
+#> Is enabled: No
+
 # Refresh workspace Outliers (like "lastoutliers in the GUI, but with custom start date)
 jws <- jws_open(file)
 jws_compute(jws)
-jws_refresh(jws, policy = "Outliers", period=12, end=c(2020,4))
+jws_refresh(jws, policy = "Outliers", period = 12, end = c(2020, 4))
+
 # Read refreshed workspace: new estimation spec
-rws3 <- read_workspace(jws, compute= TRUE)
+rws3 <- read_workspace(jws, compute = TRUE)
 #> Error: Expecting a single value: [extent=0].
 rws3$processing$`SAProcessing-1`$`RF0811`$estimationSpec
 #> Error: object 'rws3' not found
