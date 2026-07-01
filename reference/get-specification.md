@@ -1,20 +1,17 @@
 # Get Specification in a Sa-Item
 
 `get_estimation_specification()` extract the estimation specification,
-`get_domain_specification()` the domain specification, ,
-`get_active_specification()` the active specification
-`get_point_specification()` the point specification
+`get_reference_specification()` reference specification, ,
+`get_result_specification()` result specification
 
 ## Usage
 
 ``` r
-get_domain_specification(jsai)
+get_reference_specification(jsai)
 
 get_estimation_specification(jsai)
 
-get_point_specification(jsai)
-
-get_active_specification(jsai)
+get_result_specification(jsai)
 ```
 
 ## Arguments
@@ -25,11 +22,18 @@ get_active_specification(jsai)
 
 ## Value
 
-the specification
+the requested specification
+
+## References
+
+More information on different types of specifications in JDemetra+
+documentation:
+<https://doc.jdemetra.org/t-gui-sa-modelling-features#Spec-Def-App>
 
 ## Examples
 
 ``` r
+
 # Load a Workspace to modify
 file <- system.file("workspaces", "workspace_test.xml", package = "rjd3workspace")
 # \donttest{
@@ -39,69 +43,8 @@ jws <- jws_open(file)
 jsap1 <- jws_sap(jws, 1)
 jsai1 <- jsap_sai(jsap1, 1)
 
-# Get the active specification in targeted SA-item
-get_active_specification(jsai1)
-#> Specification
-#> 
-#> Series
-#> Serie span: All 
-#> Preliminary Check: Yes
-#> 
-#> Estimate
-#> Model span: All 
-#> 
-#> Tolerance: 1e-07
-#> 
-#> Transformation
-#> Function: AUTO
-#> AIC difference: -2
-#> Adjust: NONE
-#> 
-#> Regression
-#> Calendar regressor: TradingDays
-#> with Leap Year: Yes
-#> AutoAdjust: TRUE
-#> Test: REMOVE
-#> 
-#> Easter: STANDARD 
-#> Duration: 8 (Auto) 
-#> Test: ADD (Auto) 
-#> 
-#> Pre-specified outliers: 0
-#> Ramps: No
-#> 
-#> Outliers
-#> Detection span: All 
-#> Outliers type: 
-#>  - AO, critical value : 0 (Auto)
-#>  - LS, critical value : 0 (Auto)
-#>  - TC, critical value : 0 (Auto)
-#> TC rate: 0.7 (Auto)
-#> Method: ADDONE (Auto)
-#> 
-#> ARIMA
-#> SARIMA model: (0,1,1) (0,1,1)
-#> 
-#> SARIMA coefficients:
-#>  theta(1) btheta(1) 
-#>         0         0 
-#> 
-#> Specification X11
-#> Seasonal component: Yes
-#> Length of the Henderson filter: 0
-#> Seasonal filter: FILTER_MSR
-#> Boundaries used for extreme values correction : 
-#>   lower_sigma:  1.5 
-#>   upper_sigma:  2.5
-#> Nb of forecasts: -1
-#> Nb of backcasts: 0
-#> Calendar sigma: NONE
-#> 
-#> Benchmarking
-#> Is enabled: No
-
-# Get the domain specification in targeted SA-item
-get_domain_specification(jsai1)
+# Get the reference specification in targeted SA-item
+get_reference_specification(jsai1)
 #> Specification
 #> 
 #> Series
@@ -163,10 +106,67 @@ get_domain_specification(jsai1)
 
 # Get the estimation specification in targeted SA-item
 get_estimation_specification(jsai1)
-#> NULL
+#> Specification
+#> 
+#> Series
+#> Serie span: All 
+#> Preliminary Check: Yes
+#> 
+#> Estimate
+#> Model span: All 
+#> 
+#> Tolerance: 1e-07
+#> 
+#> Transformation
+#> Function: AUTO
+#> AIC difference: -2
+#> Adjust: NONE
+#> 
+#> Regression
+#> Calendar regressor: TradingDays
+#> with Leap Year: Yes
+#> AutoAdjust: TRUE
+#> Test: REMOVE
+#> 
+#> Easter: STANDARD 
+#> Duration: 8 (Auto) 
+#> Test: ADD (Auto) 
+#> 
+#> Pre-specified outliers: 0
+#> Ramps: No
+#> 
+#> Outliers
+#> Detection span: All 
+#> Outliers type: 
+#>  - AO, critical value : 0 (Auto)
+#>  - LS, critical value : 0 (Auto)
+#>  - TC, critical value : 0 (Auto)
+#> TC rate: 0.7 (Auto)
+#> Method: ADDONE (Auto)
+#> 
+#> ARIMA
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>         0         0 
+#> 
+#> Specification X11
+#> Seasonal component: Yes
+#> Length of the Henderson filter: 0
+#> Seasonal filter: FILTER_MSR
+#> Boundaries used for extreme values correction : 
+#>   lower_sigma:  1.5 
+#>   upper_sigma:  2.5
+#> Nb of forecasts: -1
+#> Nb of backcasts: 0
+#> Calendar sigma: NONE
+#> 
+#> Benchmarking
+#> Is enabled: No
 
-# Get the point specification in targeted SA-item
-get_point_specification(jsai1)
+# Get the result specification in targeted SA-item
+get_result_specification(jsai1)
 #> Specification
 #> 
 #> Series

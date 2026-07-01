@@ -24,11 +24,12 @@ jws_sap(jws, idx)
 
 ## Value
 
-Returns a java object SA-Processing or SA-Item.
+Returns a Javaobject SA-Processing or SA-Item.
 
 ## Examples
 
 ``` r
+
 # Load a Workspace
 file <- system.file("workspaces", "workspace_test.xml", package = "rjd3workspace")
 # \donttest{

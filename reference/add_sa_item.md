@@ -41,11 +41,12 @@ add_sa_item(jsap, name, x, spec)
 
 ## Value
 
-`NULL` returned invisibly
+`NULL` returned invisibly#'
 
 ## Examples
 
 ``` r
+
 dir <- tempdir()
 
 # Raw series
@@ -83,7 +84,7 @@ rws$processing$sap1$series_4
 #> [1] ""
 #> 
 #> $id
-#> [1] "b6811293-142e-481f-95d5-c07bb9e37ac8"
+#> [1] "dd2bf5a0-6ac1-4ed3-b3a7-7ae50251295e"
 #> 
 #> attr(,"class")
 #> [1] "JD3_TSMONIKER"
@@ -170,7 +171,7 @@ rws$processing$sap1$series_4
 #> attr(,"class")
 #> [1] "JD3_TS"
 #> 
-#> $domainSpec
+#> $referenceSpec
 #> Specification
 #> 
 #> Series
@@ -274,7 +275,7 @@ rws$processing$sap1$series_4
 #> Is enabled: No
 #> 
 #> 
-#> $pointSpec
+#> $resultSpec
 #> Specification
 #> 
 #> Series

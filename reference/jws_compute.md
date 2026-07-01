@@ -1,6 +1,6 @@
 # Compute a Workspace
 
-`jws_compute()` allows to extract all the SA-Items as java object.
+`jws_compute()` allows to extract all the SA-Items as Javaobject.
 
 ## Usage
 
@@ -21,6 +21,7 @@ Invisibly `NULL`
 ## Examples
 
 ``` r
+
 # Load a Workspace
 file <- system.file("workspaces", "workspace_test.xml", package = "rjd3workspace")
 # \donttest{

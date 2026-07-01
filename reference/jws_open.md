@@ -2,7 +2,7 @@
 
 `jws_open()` opens an existing Workspace (as a Java pointer) and
 [`jws_compute()`](https://rjdverse.github.io/rjd3workspace/reference/jws_compute.md)
-computes it (allowing to extract all the SA-Items as java objects).
+computes it (allowing to extract all the SA-Items as Java objects).
 
 ## Usage
 
@@ -18,7 +18,7 @@ jws_open(file)
 
 ## Value
 
-a java workspace
+a Javaworkspace
 
 ## See also
 
@@ -28,6 +28,7 @@ to transform the workspace in a R list.
 ## Examples
 
 ``` r
+
 # Load a Workspace
 file <- system.file("workspaces", "workspace_test.xml", package = "rjd3workspace")
 # \donttest{
