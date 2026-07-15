@@ -203,11 +203,7 @@ rws$processing$`SAProcessing-1`$`RF0811`$estimationSpec
 #>  - Type: UNDEFINED  
 #>  - Value: 0 
 #> 
-#> Pre-specified outliers: 4
-#>  - AO.2020-03, coefficient: 0 (UNDEFINED)
-#>  - AO.2020-04, coefficient: 0 (UNDEFINED)
-#>  - AO.2020-05, coefficient: 0 (UNDEFINED)
-#>  - AO.2024-04, coefficient: 0 (UNDEFINED)
+#> Pre-specified outliers: 0
 #> Ramps: No
 #> 
 #> Outliers
@@ -337,11 +333,10 @@ rws3$processing$`SAProcessing-1`$`RF0811`$estimationSpec
 #> Test: NO  
 #> Coef:
 #>  - Type: ESTIMATED  
-#>  - Value: -18.74348 
+#>  - Value: -8.507409 
 #> 
-#> Pre-specified outliers: 2
+#> Pre-specified outliers: 1
 #>  - LS.2024-01, coefficient: 0 (INITIAL)
-#>  - AO.2020-03, coefficient: -23.2364877397156 (INITIAL)
 #> Ramps: No
 #> 
 #> Outliers
