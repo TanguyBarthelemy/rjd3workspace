@@ -1,6 +1,6 @@
 # Changelog
 
-## rjd3workspace 3.7.1.9100
+## rjd3workspace 3.8.0.9000
 
 All notable changes to this project will be documented in this file.
 
@@ -8,13 +8,15 @@ The format is based on [Keep a
 Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [Unreleased](https://github.com/rjdverse/rjd3workspace/compare/v3.7.1...HEAD)
+### [Unreleased](https://github.com/rjdverse/rjd3workspace/compare/3.8.0...HEAD)
+
+### [3.8.0](https://github.com/rjdverse/rjd3workspace/compare/v3.7.1...3.8.0) - 2026-07-17
 
 #### Fixed
 
 - [`get_point_specification()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md)
   fails when estimation is NULL
-  [\#108](https://rjdverse.github.io/rjd3workspace/news/github.com/rjdverse/rjd3workspace/issues/108)
+  [\#108](https://github.com/rjdverse/rjd3workspace/issues/108)
 - Bug when refreshing a workspace without raw-data path in examples
 
 #### Removed
@@ -30,7 +32,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 #### Added
 
 - First release on
-  [CRAN](https://cran.r-project.org/web/packages/rjd3workspace/index.html)
+  [CRAN](https://cran.r-project.org/package=rjd3workspace)
 - New function
   [`get_domain_specification()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md),
   [`get_point_specification()`](https://rjdverse.github.io/rjd3workspace/reference/deprecated-rjd3workspace.md),
