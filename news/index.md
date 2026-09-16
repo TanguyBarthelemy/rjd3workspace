@@ -10,6 +10,15 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### [Unreleased](https://github.com/rjdverse/rjd3workspace/compare/v3.8.0...HEAD)
 
+#### Changed
+
+- `add_variables` uses `complete_modelling_context` from {rjd3toolkit},
+  corrects wrong names and accepts `mts`, `JD3_TS`, `JD3_TSCOLLECTION`
+  and `JD3_DYNAMICTS` objects
+  [\#148](https://github.com/rjdverse/rjd3toolkit/issues/148)
+- Updated JARS from jdplus-main to
+  [3.9.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.9.0)
+
 #### Deprecated
 
 - Function
@@ -210,6 +219,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   [`set_ts_metadata()`](https://rjdverse.github.io/rjd3workspace/reference/set_ts_metadata.md)
 - New JARS related to version
   [3.5.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.5.0)
+
+#### Fixed
+
+- [`set_reference_specification()`](https://rjdverse.github.io/rjd3workspace/reference/set_specification.md)
+  doesn’t change the SAI name
+  [\#55](https://github.com/rjdverse/rjd3workspace/issues/55)
 
 #### Deprecated
 
