@@ -84,7 +84,7 @@ rws$processing$sap1$series_4
 #> [1] ""
 #> 
 #> $id
-#> [1] "5ebbe0ea-008a-4dd6-b8b5-fb29de29f5a0"
+#> [1] "812372c7-2227-4702-a67b-66bdeceafb13"
 #> 
 #> attr(,"class")
 #> [1] "JD3_TSMONIKER"
@@ -203,10 +203,172 @@ rws$processing$sap1$series_4
 #> 
 #> Outliers
 #> Detection span: ALL
-#> Error in if (x$outlier$span$typeu == "All") {    cat("Detection span: All\n")}: argument is of length zero
+#> Outliers type: ao, ls, tc
+#> Critical value: 0 (Auto)
+#> TC rate: 0,7 (Auto)
+#> EML estimation: No
+#> 
+#> ARIMA
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>         0         0 
+#> 
+#> Specification SEATS
+#> Approximation mode: APP_LEGACY
+#> MA unit root boundary: 0.95
+#> Trend boundary: 0.5
+#> Seasonal tolerance: 2
+#> Seasonal boundary: 0.8
+#> Method: ALG_BURMAN
+#> Forecasts: -2
+#> Backcasts: 0
+#> Bias: TRUE
+#> 
+#> Benchmarking
+#> Is enabled: No
+#> 
+#> 
+#> $estimationSpec
+#> Specification
+#> 
+#> Series
+#> Serie span: All 
+#> Preliminary Check: Yes
+#> 
+#> Estimate
+#> Model span: All 
+#> Tolerance: 1e-07
+#> Exact ML: No
+#> Unit root limit: 0.96
+#> 
+#> Transformation
+#> Function: AUTO
+#> AIC difference: 
+#> Adjust: NONE
+#> 
+#> Regression
+#> Calendar regressor: TD7
+#> with Leap Year: Yes
+#> AutoAdjust: FALSE
+#> Test: TEST_NO
+#> 
+#> Easter: INCLUDEEASTER
+#> 
+#> Pre-specified outliers: 0
+#> Ramps: No
+#> User-defined variables: No
+#> 
+#> Outliers
+#> Detection span: ALL
+#> Outliers type: ao, ls, tc
+#> Critical value: 0 (Auto)
+#> TC rate: 0,7 (Auto)
+#> EML estimation: No
+#> 
+#> ARIMA
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>         0         0 
+#> 
+#> Specification SEATS
+#> Approximation mode: APP_LEGACY
+#> MA unit root boundary: 0.95
+#> Trend boundary: 0.5
+#> Seasonal tolerance: 2
+#> Seasonal boundary: 0.8
+#> Method: ALG_BURMAN
+#> Forecasts: -2
+#> Backcasts: 0
+#> Bias: TRUE
+#> 
+#> Benchmarking
+#> Is enabled: No
+#> 
+#> 
+#> $resultSpec
+#> Specification
+#> 
+#> Series
+#> Serie span: All 
+#> Preliminary Check: Yes
+#> 
+#> Estimate
+#> Model span: All 
+#> Tolerance: 1e-07
+#> Exact ML: No
+#> Unit root limit: 0.96
+#> 
+#> Transformation
+#> Function: LOG
+#> AIC difference: 
+#> Adjust: NONE
+#> 
+#> Regression
+#> Calendar regressor: TD7
+#> with Leap Year: Yes
+#> AutoAdjust: FALSE
+#> Test: TEST_NO
+#> 
+#> Easter: INCLUDEEASTER
+#> 
+#> Pre-specified outliers: 2
+#>  - AO (2000-06-01) 
+#>  - AO (2000-07-01) 
+#> Ramps: No
+#> User-defined variables: No
+#> 
+#> Outliers
+#> Detection span: ALL
+#> Critical value: 0 (Auto)
+#> TC rate: 0,7 (Auto)
+#> EML estimation: No
+#> 
+#> ARIMA
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>   -0.8278   -0.4255 
+#> 
+#> Specification SEATS
+#> Approximation mode: APP_LEGACY
+#> MA unit root boundary: 0.95
+#> Trend boundary: 0.5
+#> Seasonal tolerance: 2
+#> Seasonal boundary: 0.8
+#> Method: ALG_BURMAN
+#> Forecasts: -2
+#> Backcasts: 0
+#> Bias: TRUE
+#> 
+#> Benchmarking
+#> Is enabled: No
+#> 
+#> 
+#> $results
+#> Model: TRAMO-SEATS
+#> Log-transformation: yes 
+#> SARIMA model: (0,1,1) (0,1,1)
+#> 
+#> SARIMA coefficients:
+#>  theta(1) btheta(1) 
+#>   -0.8278   -0.4255 
+#> 
+#> Regression model:
+#>             mon             tue             wed             thu             fri 
+#>      -0.0109446       0.0048940       0.0001761       0.0132928      -0.0024801 
+#>             sat              lp          easter AO (2000-06-01) AO (2000-07-01) 
+#>       0.0153509       0.0410667       0.0503888       0.1681662      -0.1972348 
+#> 
+#> For a more detailed output, use the 'summary()' function.
+#> 
 
 # Writing the workspace
 save_workspace(jws, file.path(dir, "workspace.xml"))
-#> The workspace will be written to /tmp/RtmpQ9IKvp/workspace.xml.
+#> The workspace will be written to /tmp/RtmpBlacBK/workspace.xml.
 # }
 ```
